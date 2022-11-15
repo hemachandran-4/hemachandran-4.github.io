@@ -1,3 +1,29 @@
+#kickStarterBlock>h5{
+    color: #034752;
+}
+#kickStarterBlock{
+    background-color: white;
+}
+
+#asosBlock>h5{
+    color:#000000;
+}
+#asosBlock{
+    background-color: white;
+}
+
+#sudokuBlock>h5{
+    color:#ff946d;
+    /* background-color: #ff946d; */
+}
+#sudokuBlock{
+    background-color: white;
+}
+
+#contact.four{
+    margin-bottom: -80px;
+    padding-bottom: -500px;
+}
 #contactTable{
     background-color: #b3b3b3;
     height: 100%;
@@ -46,35 +72,58 @@
 .linkBarStyle3{
     background-color: #49fcd4;
 }
-.img__description {
-    position: relative;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(29, 106, 154, 0.72);
-    color: #fff;
-    visibility: hidden;
-    opacity: 0;
-  
-    /* transition effect. not necessary */
-    transition: opacity .2s, visibility .2s;
-  }
-  .item:hover .img__description {
-    color:black;
-    visibility: visible;
-    opacity: 1;
-    z-index: 5;
-  }
-  .smallSize{
-    font-size: 18px;
-  }
-  #block1work{
-    transition: 1s;
-  }
-  #kickStarterBlock{
-    transition: 1s;
-  }
-  .col-4 col-12-mobile{
-    transition: 1s;
-  }
+.smallSize{
+  font-size: 18px;
+  font-weight: bold;
+}
+.skillBlock{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 30px;
+    margin: auto;
+    
+}
+.skillImage{
+    width: 50%;
+} 
+.skillBlock p{
+
+    font-weight: bold;
+    color: black
+}
+
+#techHeading{
+    color: #000000;
+}
+
+#title{
+    
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    .skillImage{
+        width: 50%;
+    }   
+}
+@media all and (min-width: 420px) and (max-width: 767px) {
+    .skillBlock{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:10px;
+    margin: auto;
+    }
+    .skillImage{
+        width: 50%;
+    } 
+}
+@media all and (min-width: 10px) and (max-width: 419px) {
+    .skillBlock{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 0px;
+    margin: auto;
+    }
+    .skillImage{
+        width: 50%;
+    } 
+}
