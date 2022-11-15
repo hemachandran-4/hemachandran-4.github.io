@@ -50,3 +50,25 @@ function block3Fun(){
 // }
 
 
+document.querySelector("#download_resume1").addEventListener("click",function(){
+    downloadFile('/assets/portfolio/Hemachandran_J_Resume_16-09-2022-16-59-57.pdf', 'Hemachandran_J_Resume')
+
+});
+document.querySelector("#download_resume2").addEventListener("click",function(){
+    downloadFile('/assets/portfolio/Hemachandran_J_Resume_16-09-2022-16-59-57.pdf', 'Hemachandran_J_Resume')
+
+});
+
+function downloadFile(url, fileName) {
+    fetch(url, { method: 'get', mode: 'no-cors', referrerPolicy: 'no-referrer' })
+      .then(res => res.blob())
+      .then(res => {
+        const aElement = document.createElement('a');
+        aElement.setAttribute('download', fileName);
+        const href = URL.createObjectURL(res);
+        aElement.href = href;
+        aElement.setAttribute('target', '_blank');
+        aElement.click();
+        URL.revokeObjectURL(href);
+      });
+  };
